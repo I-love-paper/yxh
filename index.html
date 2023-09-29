@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>营销号生成器</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .input-container label {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    input[type="text"] {
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .output-container {
+        margin-top: 20px;
+        text-align: left;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 70%; /* Adjust the width as needed */
+    }
+
+    p#result {
+        font-weight: bold;
+    }
+</style>
+<body>
+    <h1>营销号生成器</h1>
+    <div class="input-container">
+        <label for="aInput">主体: </label>
+        <input type="text" id="aInput" placeholder="输入">
+    </div>
+    <div class="input-container">
+        <label for="bInput">事情: </label>
+        <input type="text" id="bInput" placeholder="输入">
+    </div>
+    <div class="input-container">
+        <label for="cInput">原因: </label>
+        <input type="text" id="cInput" placeholder="输入">
+    </div>
+    <button onclick="generateMarketingText()">生成</button>
+    <div class="output-container">
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function generateMarketingText() {
+            var a = document.getElementById("aInput").value || "a";
+            var b = document.getElementById("bInput").value || "b";
+            var c = document.getElementById("cInput").value || "c";
+
+            var result = `当我们探讨${a}${b}这个话题时，我们发现了更多的令人着迷的细节。${a}作为一个普遍为人所知的现象，确实引起了大家的兴趣。然而，${a}为什么${b}却一直是一个令人疑惑的问题，这激发了更多的研究和讨论。
+
+${b}这一现象的复杂性在于它不仅仅与${a}相关，还与${c}有着深刻的联系。${c}作为${a}${b}的原因，为我们揭示了这个看似不可思议的关联。一开始，人们可能会对${a}${b}和${c}之间的联系感到惊讶，但经过深入研究和发现，我们证实了这个令人惊让的事实。
+
+${a}${b}之谜的揭示引发了广泛的热议和深刻的思考。在不同领域，人们试图理解${a}、${b}和${c}之间的关系，并提出了各种解释和理论。一些人可能认为这是自然界的神秘之处，而其他人则可能试图找到更深层次的解释，从而推动科学和哲学的发展。
+
+这个发现使我们更加深入地思考了世界的复杂性和联系，也展示了科学研究和哲学探讨的无限可能性。如果你对这个话题有更多见解或观点，欢迎分享，让我们共同继续深入讨论这个引人入胜的话题！`;
+
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>
